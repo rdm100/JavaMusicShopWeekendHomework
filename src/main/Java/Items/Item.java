@@ -1,8 +1,9 @@
 package Items;
 
+import Behaviours.ISell;
 import Enums.InstrumentType;
 
-public abstract class Item {
+public abstract class Item implements ISell{
 
     private String brand;
     private double buyPrice;
@@ -38,17 +39,9 @@ public abstract class Item {
         return instrumentType;
     }
 
-    public static class Instrument extends Item {
 
-        private String model;
-
-        public Instrument(String brand, double buyPrice, double sellPrice, String material, InstrumentType instrumentType, String model) {
-            super(brand, buyPrice, sellPrice, material, instrumentType);
-            this.model = model;
-        }
-
-        public String getModel() {
-            return model;
-        }
+    public double calculateMarkUp(){
+        return this.sellPrice - this.buyPrice;
     }
+
 }

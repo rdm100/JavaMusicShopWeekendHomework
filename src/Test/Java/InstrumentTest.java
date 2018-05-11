@@ -24,7 +24,7 @@ public class InstrumentTest {
 
     @Test
     public void hasSellPrice(){
-        assertEquals(100.00, trumpet.getSellPrice(), 0.1);
+        assertEquals(50.00, trumpet.getBuyPrice(), 0.1);
     }
 
     @Test
@@ -52,4 +52,8 @@ public class InstrumentTest {
         assertEquals("Piano noises", piano.play());
     }
 
+    @Test
+    public void canCalculateMarkUp() {
+        assertEquals(50.00, trumpet.calculateMarkUp(), 0.01);
+    }
 }
