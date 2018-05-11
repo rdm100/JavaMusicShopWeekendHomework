@@ -1,9 +1,9 @@
 package Instruments;
 
 import Enums.InstrumentType;
-import Items.Instrument;
+import Items.Item;
 
-public class Trumpet extends Instrument {
+public class Trumpet extends Item.Instrument {
 
     private int numberOfValves;
 
