@@ -4,15 +4,14 @@ import Enums.InstrumentType;
 
 public class Instrument extends Item{
 
-    private  String model;
-    private String material;
-    private InstrumentType instrumentType;
+    private String model;
 
-    public Instrument(String brand, double buyPrice, double sellPrice, String model, String material, InstrumentType instrumentType) {
-        super(brand, buyPrice, sellPrice);
+    public Instrument(String brand, double buyPrice, double sellPrice, String material, InstrumentType instrumentType, String model) {
+        super(brand, buyPrice, sellPrice, material, instrumentType);
         this.model = model;
-        this.material = material;
-        this.instrumentType = instrumentType;
     }
 
+    public String getModel() {
+        return model;
+    }
 }
