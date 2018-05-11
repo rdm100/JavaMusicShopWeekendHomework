@@ -1,4 +1,5 @@
 import Enums.InstrumentType;
+import Instruments.Piano;
 import Instruments.Trumpet;
 import org.junit.Before;
 import org.junit.Test;
@@ -8,10 +9,12 @@ import static org.junit.Assert.assertEquals;
 public class InstrumentTest {
 
     Trumpet trumpet;
+    Piano piano;
 
     @Before
     public void setUp() throws Exception {
-        trumpet = new Trumpet("Vincent Bach Corporation", 50.00, 100.00, "Brass", "Stradavarius",  InstrumentType.BRASS ,3);
+        trumpet = new Trumpet("Vincent Bach Corporation", 50.00, 100.00, "Brass", InstrumentType.BRASS , "Stradavarius", 3);
+        piano = new Piano("Yamaha", 500.00, 1000.00, "Wood", InstrumentType.KEYBOARD, 88, 3);
     }
 
     @Test
@@ -42,6 +45,11 @@ public class InstrumentTest {
     @Test
     public void hasInstrumentType(){
         assertEquals(InstrumentType.BRASS, trumpet.getInstrumentType());
+    }
+
+    @Test
+    public void canGetSound() {
+        assertEquals("Piano noises", piano.play());
     }
 
 }
