@@ -41,7 +41,7 @@ public abstract class Item implements ISell{
 
 
     public double calculateMarkUp(){
-        return this.sellPrice - this.buyPrice;
+        return (this.sellPrice - this.buyPrice);
     }
 
 }

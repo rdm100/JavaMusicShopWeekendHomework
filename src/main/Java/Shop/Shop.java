@@ -2,6 +2,7 @@ package Shop;
 
 import Behaviours.ISell;
 
+
 import java.util.ArrayList;
 
 public class Shop {
@@ -32,23 +33,14 @@ public class Shop {
             this.stock.remove(item);
         }
 
-//
-//        public int profit() {
-//            int total = 0;
-//            for(ISell item : this.stock){
-//                total += item.calculateMarkup();
-//            }
-//            return total;
-//        }
-//
-//        public ArrayList<Instrument> getInstruments(){
-//            ArrayList<Instrument> copy = new ArrayList<>();
-//            for(ISell item : this.stock){
-//                if(item instanceof Instrument){
-//                    copy.add((Instrument) item);
-//                }
-//            }
-//            return copy;
-//        }
+
+        public double profit() {
+            int total = 0;
+            for(ISell item : this.stock){
+                total += item.calculateMarkUp();
+            }
+            return total;
+        }
+
 
 }

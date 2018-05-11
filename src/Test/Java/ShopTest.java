@@ -45,5 +45,11 @@ public class ShopTest {
         assertEquals(1, shop.countStock());
     }
 
+    @Test
+    public void canGetPotentialProfit() {
+        shop.addStock(piano);
+        shop.addStock(trumpet);
+        assertEquals(550, shop.profit(), 0.1);
+    }
 
 }
